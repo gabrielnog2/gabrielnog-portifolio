@@ -5,43 +5,8 @@
 
 <a href="https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo"><img src="https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg" width="200"/></a> <a href="https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999"><img src="https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg" width="250"/></a>
 
----
 
-
-
-## 🚧 Status do Projeto
-
-
-
-
-[![Versão](https://img.shields.io/github/v/release/gabrielnog2/portifolio-gabrielnog?style=for-the-badge)](https://github.com/gabrielnog2/portifolio-gabrielnog/releases)
-
-![React](https://img.shields.io/badge/React-19.1.1-007ec6?style=for-the-badge&logo=react&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7.1.2-007ec6?style=for-the-badge&logo=vite&logoColor=white)
-
-![GitHub repo size](https://img.shields.io/github/repo-size/gabrielnog2/portifolio-gabrielnog?style=for-the-badge&logo=files)
-![GitHub directory file count](https://img.shields.io/github/directory-file-count/gabrielnog2/portifolio-gabrielnog?style=for-the-badge&logo=files)
-
-![GitHub forks](https://img.shields.io/github/forks/gabrielnog2/portifolio-gabrielnog?style=for-the-badge&logo=git)
-![GitHub language count](https://img.shields.io/github/languages/count/gabrielnog2/portifolio-gabrielnog?style=for-the-badge&logo=github)
-
-![GitHub license](https://img.shields.io/github/license/gabrielnog2/portifolio-gabrielnog?style=for-the-badge&color=007ec6&logo=opensourceinitiative)
-
-![Vercel](https://vercelbadge.vercel.app/api/gabrielnog2/portifolio-gabrielnog?style=for-the-badge)
-
-![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub.com%2Fgabrielnog2%2Fportifolio-gabrielnog&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)
----
-
-<!-- Este template foi criado para servir como referência e pode ser facilmente adaptado para diferentes projetos de desenvolvimento -->
-
-<!-- [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo) [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999)
--->
-
-<a href="https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo"><img src="https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg" width="200"/></a> <a href="https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999"><img src="https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg" width="250"/></a>
-
----
-
-# 🏷️ Nome do Projeto 👨‍💻
+# 🏷️ Portifólio- Gabriel Nogueira 👨‍💻
 
 > [!NOTE]
 > Breve descrição do projeto. **Foque no principal valor/benefício.**  
