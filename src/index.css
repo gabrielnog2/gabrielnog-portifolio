@@ -1,192 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Roboto+Mono:wght@400;700&family=Caveat:wght@700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: #000; 
+  background-color: #05070a;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  position: relative; 
+  color: #e0e0e0;
+  position: relative;
 }
 
 
 body::before {
   content: "";
-  position: fixed;
- 
-  top: -5%; 
-  left: -5%;
-  width: 110vw;
-  height: 110vh;
-  
-
-  background-image: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2500&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
-  
+  position: fixed; 
+  top: 0; left: 0; right: 0; bottom: 0;
   z-index: -2; 
   
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 40%), 
+    radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.08) 0%, transparent 50%), 
+    radial-gradient(circle at 50% 50%, rgba(217, 70, 219, 0.05) 0%, transparent 60%), 
+    linear-gradient(135deg, #05070a 0%, #0c121e 100%);
   
-  animation: spaceDrift 60s ease-in-out infinite alternate;
+  filter: blur(80px);
+  animation: cosmicShimmer 40s ease-in-out infinite alternate;
 }
 
-
-@keyframes spaceDrift {
-  0% {
- 
-    transform: scale(1) translate(0px, 0px) rotate(0deg);
-  }
-  100% {
-
-    transform: scale(1.1) translate(-25px, -15px) rotate(1deg);
-  }
-}
-
-#root {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-.walkman {
-  width: 90vw;
-  max-width: 550px;
-  height: auto;
-  min-height: 700px;
-  background: #9ca3af; 
-  padding: 40px 30px;
-  border-radius: 12px;
-  position: relative;
-  
-  
-  box-shadow: 
-    20px 30px 60px rgba(0,0,0,0.9),
-    inset 2px 2px 2px rgba(255,255,255,0.4),
-    inset -2px -2px 5px rgba(0,0,0,0.3);
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #777;
-}
-
-
-.display {
-  background: #0a0a0a; 
-  border: 10px solid #888; 
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;
-  height: 350px;
-  box-shadow: inset 0 0 30px rgba(0,0,0,1);
-  overflow: hidden;
-  
- 
-  background: linear-gradient(135deg, #111 0%, #050505 100%);
-}
-
-.display::after {
+body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
-  pointer-events: none;
+  z-index: -1; 
+  
+  background-image: 
+    radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 2px), 
+    radial-gradient(white, rgba(255,255,255,.15) 1.5px, transparent 3px), 
+    radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2.5px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 1px, transparent 2px);
+  
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  animation: starDrift 100s linear infinite;
 }
 
-
-.content {
-  position: relative;
-  z-index: 10;
-  color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0 10px rgba(0,204,255,0.5); 
+@keyframes cosmicShimmer {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.1); }
 }
 
-
-h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #fbbf24; 
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: 'Courier New', Courier, monospace;
+@keyframes starDrift {
+  from { background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; }
+  to { background-position: 550px 1100px, 440px 610px, 680px 270px, 370px 650px; }
 }
+
 
 .app-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
-  overflow: hidden; 
-  z-index: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 
-.app-container::before {
-  content: "";
+.main-content-area {
+  width: 100%;
+  max-width: 1000px;
+  margin-right: 250px; 
+  min-height: 85vh; 
+  height: auto;      
+  z-index: 10; 
+}
+
+.sci-fi-monitor {
+  width: 100%;
+  min-height: 100%;  
+  height: auto;     
+  
+  background: transparent; 
+  border: none; 
+  box-shadow: none;
+  backdrop-filter: none; 
+  
+  padding: 180px 3rem 3rem 3rem; 
+  position: relative;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  color: #e0e0e0; 
+}
+
+
+.scanlines {
+  display: none; 
+}
+
+.scanlines {
   position: absolute;
-  top: -10%;    
-  width: 120%;  
-  height: 120%;
-  z-index: -1;  
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.1)
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.6;
+}
 
- 
-
-  background-image: url('CAMINHO_PARA_A_IMAGEM_QUE_VOCE_MANDOU.jpg');
-  
-  background-size: cover;
-  background-position: center;
-
- 
-  animation: spaceVoyage 60s ease-in-out infinite alternate;
+/* WALKMAN */
+.walkman-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  transform: scale(0.45);
+  transform-origin: bottom right;
 }
 
 
-@keyframes spaceVoyage {
-  0% {
-    
-    transform: scale(1) translate(0, 0) rotate(0deg);
+@media (max-width: 900px) {
+  .main-content-area {
+    margin-right: 0;
+    margin-bottom: 150px; 
+    min-height: 70vh;  
+    height: auto;      
   }
-  100% {
-  
-    transform: scale(1.15) translate(-5%, -3%) rotate(2deg);
+
+  .walkman-widget {
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%) scale(0.35);
+    transform-origin: bottom center;
   }
-}
-
-
-.header {
-  padding: 20px;
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #444;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.header h1 {
-  margin: 0;
-  color: #fbbf24;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
-}
-
-.footer {
-  padding: 15px;
-  background-color: #1a1a1a;
-  border-top: 2px solid #444;
-  text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
-.footer p {
-  margin: 0;
 }

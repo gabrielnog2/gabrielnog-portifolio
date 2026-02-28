@@ -1,0 +1,218 @@
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sobre-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+
+.language-toggle-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.cyber-btn {
+  background: transparent;
+  color: #ffc107;
+  font-family: 'Michroma', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  padding: 8px 20px;
+  border: 1px solid #ffc107;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.cyber-btn:hover {
+  background: rgba(255, 193, 7, 0.2);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+  text-shadow: 0 0 5px #ffc107;
+}
+
+
+.profile-image-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.holo-ring {
+  position: absolute;
+  top: -10px; left: -10px; right: -10px; bottom: -10px;
+  border: 2px solid #ff8c00;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 20px rgba(255, 140, 0, 0.6),
+    inset 0 0 20px rgba(255, 140, 0, 0.4);
+  animation: rotateRing 10s linear infinite;
+  border-top-color: transparent; 
+  border-bottom-color: transparent;
+}
+
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: sepia(0.3) contrast(1.2); 
+  position: relative;
+  z-index: 2;
+  border: 2px solid #ffd700;
+}
+
+
+.text-wrapper {
+  flex: 1;
+}
+
+.system-status {
+  font-family: 'Roboto Mono', monospace;
+  color: #ff8c00;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+}
+
+.section-title {
+  font-family: 'Michroma', sans-serif;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  -webkit-text-stroke: 1px #ffc107;
+  text-shadow: 2px 2px 0px #8b4513, 0 0 15px rgba(255, 165, 0, 0.6);
+}
+
+.bio-text p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+
+.tech-mini-panel {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cyber-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff8c00, transparent);
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+.tech-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tech-label {
+  font-family: 'Michroma', sans-serif;
+  color: #ffc107;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  min-width: 120px;
+  text-shadow: 0 0 5px rgba(255, 165, 0, 0.4);
+}
+
+.tech-icons-small {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.tech-item-small {
+  width: 35px;
+  height: 35px;
+  background: rgba(20, 15, 10, 0.6);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.tech-item-small:hover {
+  border-color: #00f3ff;
+  background: rgba(0, 243, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.tech-item-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  transition: transform 0.3s ease;
+}
+
+.tech-item-small:hover img {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  .sobre-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .tech-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tech-label {
+    text-align: center;
+  }
+  
+  .tech-icons-small {
+    justify-content: center;
+  }
+}
