@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import Header from "./components/Header"; // Verifique se o caminho da pasta está correto
+import Header from "./components/Header"; 
 import Footer from "./components/Footer";
 import Walkman from "./components/Walkman";
 
 
 import Sobre from "./sections/Sobre";
 import Projetos from "./sections/Projetos";
-
+import Experiencia from "./sections/Experiencia";
+import Contato from './sections/Contato';
 import "./index.css"; 
 
 function App() {
@@ -23,6 +24,20 @@ function App() {
       vol: "VOL. 2",
       title: "PROJETOS", 
       component: <Projetos /> 
+    },
+
+    { 
+      id: "03", 
+      vol: "VOL. 3",
+      title: "EXPERIÊNCIA", 
+      component: <Experiencia /> 
+    },
+
+    { 
+      id: "04", 
+      vol: "VOL. 4",
+      title: "CONTATO", 
+      component: <Contato /> 
     }
     
   ];

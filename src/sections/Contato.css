@@ -1,0 +1,162 @@
+/* CONTAINER BASE E CORES RAVAGER */
+.contato-container { display: flex; flex-direction: column; width: 100%; animation: fadeIn 0.8s ease-out forwards; }
+.ravager-readout { color: #ff6a00 !important; text-shadow: 0 0 8px rgba(255, 106, 0, 0.6) !important; }
+.orange-dot { background-color: #ff6a00; box-shadow: 0 0 10px #ff6a00; }
+
+/* GRID PRINCIPAL */
+.milano-dashboard-grid {
+  display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-top: 20px;
+}
+
+/* =========================================
+   LADO ESQUERDO: HACKED COMMS PANEL
+   ========================================= */
+.hacked-panel {
+  background: linear-gradient(135deg, rgba(20, 10, 30, 0.9), rgba(10, 15, 25, 0.95));
+  border: 2px solid #8a2be2;
+  box-shadow: inset 0 0 20px rgba(138, 43, 226, 0.2);
+  border-radius: 8px 0 8px 0;
+  padding: 25px; display: flex; flex-direction: column; position: relative;
+}
+.hacked-panel::before {
+  content: ''; position: absolute; top: -5px; right: -5px; width: 30px; height: 30px;
+  border-top: 3px solid #00d4ff; border-right: 3px solid #00d4ff;
+}
+
+.orange-bar { border-bottom: 1px dashed rgba(255, 106, 0, 0.5); color: #ff6a00; padding-bottom: 10px; display: flex; justify-content: space-between; font-family: 'Roboto Mono', monospace; font-size: 0.85rem;}
+.status-ok { color: #00ff9d; }
+
+/* Globo Holográfico Guardiões */
+.hologram-globe {
+  width: 100%; height: 140px; margin: 20px 0; position: relative;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 60%);
+  border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 10px; overflow: hidden;
+}
+.globe-grid {
+  width: 100%; height: 100%;
+  background-image: linear-gradient(rgba(0, 212, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 212, 255, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px; transform: perspective(500px) rotateX(60deg); transform-origin: bottom; animation: moveGrid 5s linear infinite;
+}
+.globe-scanline {
+  position: absolute; top: 0; width: 100%; height: 3px; background: #00d4ff; box-shadow: 0 0 10px #00d4ff; animation: scanGlobe 3s ease-in-out infinite alternate;
+}
+@keyframes moveGrid { 100% { background-position: 0 20px; } }
+@keyframes scanGlobe { 0% { top: 0; opacity: 0.2; } 50% { opacity: 1; } 100% { top: 100%; opacity: 0.2; } }
+
+/* Links Sociais Milano */
+.social-links-container { display: flex; flex-direction: column; gap: 15px; }
+.milano-target {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: #b0c4de;
+  text-decoration: none; padding: 12px; background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(138, 43, 226, 0.3); border-radius: 5px; transition: all 0.3s ease;
+}
+.icon-box { background: rgba(255, 106, 0, 0.1); padding: 5px 8px; border-radius: 4px; border: 1px solid #ff6a00; }
+.target-name { font-weight: bold; letter-spacing: 1px; }
+.target-line { height: 2px; flex-grow: 1; background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.5)); }
+
+.milano-target:hover { background: rgba(138, 43, 226, 0.2); border-color: #00d4ff; color: #fff; transform: translateX(5px); }
+.milano-target:hover .icon-box { background: #ff6a00; color: #000; box-shadow: 0 0 10px #ff6a00; }
+.milano-target:hover .target-line { background: linear-gradient(90deg, transparent, #00d4ff); }
+
+/* =========================================
+   LADO DIREITO: TAPE DECK FORM (O FORMULÁRIO MELHORADO)
+   ========================================= */
+.tape-deck-panel {
+  background: rgba(10, 10, 15, 0.9);
+  border: 2px solid #222;
+  border-radius: 12px;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 5px 15px rgba(0,0,0,0.5);
+  padding: 40px; position: relative; overflow: hidden;
+}
+
+.rocket-tape-stripes {
+  position: absolute; top: -15px; right: -40px; width: 150px; height: 35px;
+  background: #ff6a00; transform: rotate(45deg); opacity: 0.9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5); border-bottom: 2px dashed #cc5500;
+}
+
+.form-header-tech { margin-bottom: 25px; }
+.launch-title {
+  font-family: 'Roboto Mono', monospace; color: #00d4ff;
+  font-size: 1.1rem; margin: 0 0 10px 0; letter-spacing: 2px; text-transform: uppercase;
+}
+.tech-decor-line { height: 2px; width: 50px; background: #ff6a00; box-shadow: 0 0 8px #ff6a00; }
+
+.milano-form { display: flex; flex-direction: column; gap: 20px; }
+
+/* GRID DO FORMULÁRIO */
+.form-grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.full-width { grid-column: 1 / -1; }
+
+/* Inputs Layout Melhorado */
+.gotg-input { display: flex; flex-direction: column; gap: 8px; }
+.gotg-input label { 
+  color: #b0c4de; font-family: 'Roboto Mono', monospace; font-size: 0.75rem; letter-spacing: 1px;
+}
+.bracket { color: #8a2be2; font-weight: bold; }
+
+.input-wrapper { position: relative; width: 100%; }
+.gotg-input input, .gotg-input textarea {
+  width: 100%; box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(138, 43, 226, 0.4);
+  border-radius: 4px; color: #fff; font-family: 'Roboto Mono', monospace; font-size: 0.9rem;
+  padding: 12px 15px; outline: none; transition: all 0.3s ease;
+  position: relative; z-index: 2;
+}
+.gotg-input textarea { resize: vertical; min-height: 100px; }
+
+.input-glow {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 4px; background: transparent; box-shadow: 0 0 0 transparent;
+  transition: all 0.3s ease; z-index: 1; pointer-events: none;
+}
+
+.gotg-input input:focus, .gotg-input textarea:focus { border-color: #00d4ff; background: rgba(0, 212, 255, 0.05); }
+.gotg-input input:focus + .input-glow, .gotg-input textarea:focus + .input-glow {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); border: 1px solid #00d4ff;
+}
+
+/* Rodapé do Formulário (Status e Botão) */
+.form-footer-action {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px;
+}
+
+.status-container { flex-grow: 1; margin-right: 20px; }
+.launch-status {
+  padding: 10px 15px; font-family: 'Roboto Mono', monospace; font-size: 0.8rem;
+  border-radius: 4px; font-weight: bold; text-transform: uppercase;
+}
+.idle-status { color: #555; background: rgba(255, 255, 255, 0.05); border: 1px dashed #444; }
+.launch-status.sending { color: #ff6a00; border: 1px dashed #ff6a00; background: rgba(255, 106, 0, 0.1); animation: pulseStatus 1s infinite alternate; }
+.launch-status.success { color: #00ff9d; border: 1px solid #00ff9d; background: rgba(0, 255, 157, 0.1); text-shadow: 0 0 10px #00ff9d; }
+.launch-status.error { color: #ff003c; border: 1px solid #ff003c; background: rgba(255, 0, 60, 0.1); }
+
+@keyframes pulseStatus { 0% { opacity: 0.7; } 100% { opacity: 1; } }
+
+/* BOTÃO HYPERDRIVE */
+.hyperdrive-btn {
+  background: linear-gradient(90deg, #ff6a00, #ff8c00);
+  border: 1px solid #ff6a00; border-radius: 4px; /* Voltando para bordas mais quadradas sci-fi */
+  color: #111; font-family: 'Michroma', sans-serif; font-weight: bold;
+  font-size: 0.9rem; padding: 12px 25px; cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 106, 0, 0.4), inset 0 2px 5px rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease; display: flex; align-items: center; gap: 10px; white-space: nowrap;
+}
+.hyperdrive-btn:hover:not(.locked) {
+  background: linear-gradient(90deg, #00d4ff, #00ffff); border-color: #00d4ff;
+  box-shadow: 0 0 20px #00d4ff, inset 0 2px 5px rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px); color: #000;
+}
+.hyperdrive-btn:active:not(.locked) { transform: translateY(1px); }
+.hyperdrive-btn.locked { opacity: 0.5; background: #555; border-color: #444; cursor: not-allowed; color: #aaa; box-shadow: none; }
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .milano-dashboard-grid { grid-template-columns: 1fr; }
+  .form-grid-layout { grid-template-columns: 1fr; } /* Em celular, empilha Nome e E-mail */
+  .form-footer-action { flex-direction: column; gap: 15px; align-items: stretch; }
+  .status-container { margin-right: 0; text-align: center; }
+  .hyperdrive-btn { justify-content: center; }
+}
