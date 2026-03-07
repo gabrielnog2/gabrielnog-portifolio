@@ -40,7 +40,7 @@ function App() {
 
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   
-  // --- MOTOR DE ÁUDIO DO WALKMAN ---
+  
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
@@ -59,7 +59,7 @@ function App() {
       setIsPlaying(false);
     }
   };
-  // ---------------------------------
+
 
   const nextTrack = () => {
     setCurrentTrackIndex((prev) => (prev + 1) % tracks.length);
@@ -74,7 +74,7 @@ function App() {
   return (
     <div className="app-container">
       
-      {/* O toca-fitas invisível que puxa a música da sua pasta public */}
+      
       <audio ref={audioRef} src="/awesome-mix.mp3" loop preload="auto"></audio>
       
       <Header />

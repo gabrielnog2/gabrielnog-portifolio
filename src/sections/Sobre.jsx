@@ -55,10 +55,10 @@ function Sobre() {
             <p>{content[language].bio1}</p>
           </div>
 
-          {/* === PAINEL DE TECNOLOGIAS EMBUTIDO ABAIXO DO TEXTO === */}
+          
           <div className="tech-mini-panel">
             
-            {/* Linha Divisória */}
+           
             <div className="cyber-divider"></div>
             
             <div className="tech-row">

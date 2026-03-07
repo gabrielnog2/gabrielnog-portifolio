@@ -116,9 +116,7 @@ body::after {
   opacity: 0.6;
 }
 
-/* ========================================= */
-/* WALKMAN - Padrão (Telas Grandes)          */
-/* ========================================= */
+
 .walkman-widget {
   position: fixed;
   bottom: 20px;

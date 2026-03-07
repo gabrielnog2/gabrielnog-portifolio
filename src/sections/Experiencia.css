@@ -59,7 +59,6 @@
   align-items: stretch;
 }
 
-/* --- ESQUERDA: LISTA DE REGISTROS --- */
 .mission-list-panel {
   width: 320px;
   flex-shrink: 0;
@@ -94,7 +93,7 @@
 .mission-nav-btn {
   background: linear-gradient(135deg, rgba(15, 10, 5, 0.8), rgba(0, 0, 0, 0.9));
   border: 1px solid rgba(255, 140, 0, 0.2);
-  /* Recorte lateral estilo painel */
+  
   clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
   padding: 20px;
   display: flex;
@@ -139,11 +138,11 @@
   background: linear-gradient(135deg, rgba(255, 140, 0, 0.1), rgba(0, 0, 0, 0.9));
 }
 
-/* BOTÃO ATIVO & EQUALIZADOR DE ÁUDIO */
+
 .mission-nav-btn.active {
   background: linear-gradient(135deg, rgba(0, 243, 255, 0.15), rgba(0, 0, 0, 0.9));
   border-color: #00f3ff;
-  box-shadow: -5px 0 0 #00f3ff; /* Borda grossa na esquerda */
+  box-shadow: -5px 0 0 #00f3ff; 
 }
 
 .mission-nav-btn.active .mission-log-id { color: #00f3ff; opacity: 1; }
@@ -173,14 +172,14 @@
   100% { height: 100%; }
 }
 
-/* --- DIREITA: TELA HUD (HEADS-UP DISPLAY) --- */
+
 .mission-briefing-panel {
   flex: 1;
 }
 
 .hud-screen {
   background-color: rgba(5, 7, 12, 0.85);
-  /* Fundo de Grid/Radar */
+ 
   background-image: 
     linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
@@ -193,7 +192,7 @@
   overflow: hidden;
 }
 
-/* OVERLAY DE DESCRIPTOGRAFIA */
+
 .decryption-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -222,7 +221,7 @@
 
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-/* CONTEÚDO DA TELA E GLITCH */
+
 .hud-content-wrapper {
   position: relative;
   z-index: 5;

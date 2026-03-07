@@ -2,7 +2,7 @@ import { useState } from "react";
 import Controls from "./Controls";
 import "./Walkman.css";
 
-// Adicionamos 'stop' às props para receber a função do App.jsx
+
 function Walkman({ title, next, prev, play, stop, isPlaying = false }) {
   const [seekState, setSeekState] = useState(null);
 
@@ -90,7 +90,7 @@ function Walkman({ title, next, prev, play, stop, isPlaying = false }) {
                 <rect x="55" y="35" width="340" height="210" rx="8" fill="#000" opacity="0.3" />
                 <rect x="110" y="95" width="230" height="65" rx="4" fill="#0c0c0e" />
 
-                {/* Rolo Esquerdo */}
+               
                 <g className={reelClass} style={{ transformOrigin: '155px 127px' }}>
                   <circle cx="155" cy="127" r="28" fill="#3a281c" /> 
                   <circle cx="155" cy="127" r="16" fill="url(#metalHub)" /> 
@@ -99,7 +99,7 @@ function Walkman({ title, next, prev, play, stop, isPlaying = false }) {
                   <polygon points="152,124 158,124 155,130" fill="#fff" opacity="0.5" /> 
                 </g>
 
-                {/* Rolo Direito */}
+              
                 <g className={reelClass} style={{ transformOrigin: '295px 127px' }}>
                   <circle cx="295" cy="127" r="20" fill="#3a281c" /> 
                   <circle cx="295" cy="127" r="16" fill="url(#metalHub)" /> 
@@ -144,7 +144,7 @@ function Walkman({ title, next, prev, play, stop, isPlaying = false }) {
           </div>
 
           <div className="controls-wrapper-realistic">
-            {/* Agora passamos tanto o play quanto o stop para o componente Controls */}
+            
             <Controls next={handleNext} prev={handlePrev} play={play} stop={stop} />
           </div>
         </div>

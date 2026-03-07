@@ -1,4 +1,4 @@
-/* CONTAINER BASE E CORES RAVAGER */
+
 .contato-container { display: flex; flex-direction: column; width: 100%; animation: fadeIn 0.8s ease-out forwards; }
 .ravager-readout { color: #ff6a00 !important; text-shadow: 0 0 8px rgba(255, 106, 0, 0.6) !important; }
 .orange-dot { background-color: #ff6a00; box-shadow: 0 0 10px #ff6a00; }
@@ -8,9 +8,6 @@
   display: grid; grid-template-columns: 1fr 2fr; gap: 30px; margin-top: 20px;
 }
 
-/* =========================================
-   LADO ESQUERDO: HACKED COMMS PANEL
-   ========================================= */
 .hacked-panel {
   background: linear-gradient(135deg, rgba(20, 10, 30, 0.9), rgba(10, 15, 25, 0.95));
   border: 2px solid #8a2be2;
@@ -26,7 +23,7 @@
 .orange-bar { border-bottom: 1px dashed rgba(255, 106, 0, 0.5); color: #ff6a00; padding-bottom: 10px; display: flex; justify-content: space-between; font-family: 'Roboto Mono', monospace; font-size: 0.85rem;}
 .status-ok { color: #00ff9d; }
 
-/* Globo Holográfico Guardiões */
+
 .hologram-globe {
   width: 100%; height: 140px; margin: 20px 0; position: relative;
   background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 60%);
@@ -43,7 +40,6 @@
 @keyframes moveGrid { 100% { background-position: 0 20px; } }
 @keyframes scanGlobe { 0% { top: 0; opacity: 0.2; } 50% { opacity: 1; } 100% { top: 100%; opacity: 0.2; } }
 
-/* Links Sociais Milano */
 .social-links-container { display: flex; flex-direction: column; gap: 15px; }
 .milano-target {
   display: flex; align-items: center; justify-content: space-between; gap: 10px;
@@ -59,9 +55,7 @@
 .milano-target:hover .icon-box { background: #ff6a00; color: #000; box-shadow: 0 0 10px #ff6a00; }
 .milano-target:hover .target-line { background: linear-gradient(90deg, transparent, #00d4ff); }
 
-/* =========================================
-   LADO DIREITO: TAPE DECK FORM (O FORMULÁRIO MELHORADO)
-   ========================================= */
+
 .tape-deck-panel {
   background: rgba(10, 10, 15, 0.9);
   border: 2px solid #222;
@@ -117,7 +111,7 @@
   box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); border: 1px solid #00d4ff;
 }
 
-/* Rodapé do Formulário (Status e Botão) */
+
 .form-footer-action {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px;
@@ -138,7 +132,7 @@
 /* BOTÃO HYPERDRIVE */
 .hyperdrive-btn {
   background: linear-gradient(90deg, #ff6a00, #ff8c00);
-  border: 1px solid #ff6a00; border-radius: 4px; /* Voltando para bordas mais quadradas sci-fi */
+  border: 1px solid #ff6a00; border-radius: 4px; 
   color: #111; font-family: 'Michroma', sans-serif; font-weight: bold;
   font-size: 0.9rem; padding: 12px 25px; cursor: pointer;
   box-shadow: 0 5px 15px rgba(255, 106, 0, 0.4), inset 0 2px 5px rgba(255, 255, 255, 0.5);
@@ -155,7 +149,7 @@
 /* Responsividade */
 @media (max-width: 900px) {
   .milano-dashboard-grid { grid-template-columns: 1fr; }
-  .form-grid-layout { grid-template-columns: 1fr; } /* Em celular, empilha Nome e E-mail */
+  .form-grid-layout { grid-template-columns: 1fr; } 
   .form-footer-action { flex-direction: column; gap: 15px; align-items: stretch; }
   .status-container { margin-right: 0; text-align: center; }
   .hyperdrive-btn { justify-content: center; }

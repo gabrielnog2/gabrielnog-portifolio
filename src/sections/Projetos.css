@@ -1,4 +1,4 @@
-/* CONTAINER BASE E CONTROLES */
+
 .projetos-container {
   display: flex;
   flex-direction: column;
@@ -224,7 +224,7 @@
 }
 .hud-panel:hover .project-image { filter: brightness(1) sepia(0) hue-rotate(0deg) saturate(1); transform: scale(1.02); }
 
-/* Textos e Badges */
+
 .project-name {
   font-family: 'Michroma', sans-serif; color: #fff;
   font-size: 1.1rem; margin: 0 0 10px 0;
