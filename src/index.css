@@ -169,6 +169,8 @@ body::after {
   .sci-fi-monitor {
     
     padding: 100px 1rem 220px 1rem; 
+    width: auto; 
+    box-sizing: border-box;
   }
   .walkman-widget {
     transform: scale(0.22); 
